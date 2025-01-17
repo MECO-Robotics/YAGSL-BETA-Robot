@@ -48,4 +48,30 @@ public final class Constants
     public static final double RIGHT_X_DEADBAND = 0.1;
     public static final double TURN_CONSTANT    = 6;
   }
+
+  public static class ElevatorConstants
+  {
+
+    // Elevator CAN IDs
+    public static final int rightElevatorMotorID = 10;
+    public static final int leftElevatorMotorID  = 11;
+
+    public static final int ELEVATOR_ENCODER_PORT = 0;
+
+    // Elevator Constants
+    public static final double ELEVATOR_MAX_HEIGHT = 0.0;
+    public static final double ELEVATOR_MIN_HEIGHT = 0.0;
+    public static final double ELEVATOR_SPEED      = 0.0;
+
+    // Elevator PID Constants
+    public static final double ELEVATOR_KP = 0.0;
+    public static final double ELEVATOR_KI = 0.0;
+    public static final double ELEVATOR_KD = 0.0;
+
+    // Elevator Feed Forward Constants
+    public static final double ELEVATOR_KS = 0.0;
+    public static final double ELEVATOR_KV = 0.0;
+    public static final double ELEVATOR_KG = 0.0;
+    
+  }
 }
