@@ -32,16 +32,15 @@ public class ElevatorSubsystem extends SubsystemBase {
             Constants.ElevatorConstants.ELEVATOR_KG, Constants.ElevatorConstants.ELEVATOR_KV);
 
     private boolean enabled = false;
-/* 
-    private TrapezoidProfile profile = new TrapezoidProfile(Constants.ElevatorConstants.kArmMotionConstraint);
-    private TrapezoidProfile.State goalState, setPoint;
-*/
+    /*
+     * private TrapezoidProfile profile = new
+     * TrapezoidProfile(Constants.ElevatorConstants.kArmMotionConstraint);
+     * private TrapezoidProfile.State goalState, setPoint;
+     */
 
     public ElevatorSubsystem() {
         // rightElevatorMotor.setInverted(true);
 
-   
-        
     }
 
     public void setVoltage(double voltage) {
@@ -51,7 +50,7 @@ public class ElevatorSubsystem extends SubsystemBase {
 
     @Override
     public void periodic() {
-       
+
     }
 
     public void enable() {
@@ -62,20 +61,20 @@ public class ElevatorSubsystem extends SubsystemBase {
         enabled = false;
     }
 
-    public double getPosition(){
+    public double getPosition() {
         return elevatorEncoder.get();
     }
 
-    public boolean isBusy(){
+    public boolean isBusy() {
         return !PID.atSetpoint();
     }
-    /* 
-    public double getVelocity(){
-        return elevatorEncoder.getRate();
-    }
-   */
+    /*
+     * public double getVelocity(){
+     * return elevatorEncoder.getRate();
+     * }
+     */
 
-   public void setPosition(double position){
-    //goalState = new TrapezoidProfile.State(position, 0);
-   }
-} 
+    public void setPosition(double position) {
+        // goalState = new TrapezoidProfile.State(position, 0);
+    }
+}
